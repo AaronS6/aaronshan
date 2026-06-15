@@ -1,0 +1,27 @@
+{
+  "name": "aaronshan",
+  "version": "1.0.0",
+  "description": "Aaron Shan's student portfolio website with Vercel Web Analytics",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronS6/aaronshan.git"
+  },
+  "keywords": [
+    "portfolio",
+    "student",
+    "analytics"
+  ],
+  "author": "Aaron Shan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AaronS6/aaronshan/issues"
+  },
+  "homepage": "https://github.com/AaronS6/aaronshan#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
