@@ -567,12 +567,12 @@
     html.entry-motion .hero-art{transition:opacity .72s ease .22s,transform .55s var(--ease-out)}
 
     /* Existing reveals are softened so they are felt rather than noticed. */
-    html.animations-ready .reveal{opacity:0;filter:blur(2px);transform:translateY(17px) scale(.998)}
+    html.animations-ready .reveal{opacity:1;filter:blur(2px);transform:translateY(17px) scale(.998)}
     html.animations-ready .reveal.show{opacity:1;filter:none;transform:none}
     .reveal{transition:opacity .72s ease,transform .82s var(--ease-editorial),filter .72s ease}
 
     /* Small staggered reveals for repeated content. Added only by JS. */
-    html.micro-motion-ready .micro-reveal{opacity:0;transform:translateY(10px);transition:opacity .56s ease var(--micro-delay,0ms),transform .66s var(--ease-editorial) var(--micro-delay,0ms)}
+    html.micro-motion-ready .micro-reveal{opacity:1;transform:translateY(10px);transition:opacity .56s ease var(--micro-delay,0ms),transform .66s var(--ease-editorial) var(--micro-delay,0ms)}
     html.micro-motion-ready .micro-reveal.micro-visible{opacity:1;transform:none}
 
     /* General surface consistency */
@@ -2421,6 +2421,25 @@
       }
       .wg-tile{
         overflow:hidden;
+      }
+    }
+
+    
+    /* === SAFETY NET: ensure all content is visible on mobile === */
+    @media(max-width:900px){
+      .reveal,
+      .micro-reveal,
+      .project,
+      .award,
+      .slide,
+      .skill-pill,
+      .contact-method,
+      .footer-links a,
+      .about-tags .tag{
+        opacity:1!important;
+        filter:none!important;
+        transform:none!important;
+        visibility:visible!important;
       }
     }
 
